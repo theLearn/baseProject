@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorBackground"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/default_dimen"
+                style="@style/ll_default">
+
+                <com.example.hongcheng.common.view.RequiredTipTextView
+                    style="@style/requireTipDefault"
+                    app:requiredText="@string/hint_type"/>
+
+                <com.example.hongcheng.common.view.nicespinner.NiceSpinner
+                    android:id="@+id/ns_type"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    app:textTint = "@color/text_default"
+                    android:layout_marginLeft="@dimen/public_space_value_10"
+                    android:layout_marginStart="@dimen/public_space_value_10" />
+
+            </LinearLayout>
+
+            <include layout="@layout/line_horizontal"/>
+
+            <LinearLayout
+                style="@style/ll_default">
+
+                <com.example.hongcheng.common.view.RequiredTipTextView
+                    style="@style/requireTipDefault"
+                    app:requiredText="@string/hint_card_type"/>
+
+                <com.example.hongcheng.common.view.nicespinner.NiceSpinner
+                    android:id="@+id/ns_card_type"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    app:textTint = "@color/text_default"
+                    android:layout_marginLeft="@dimen/public_space_value_10"
+                    android:layout_marginStart="@dimen/public_space_value_10" />
+
+            </LinearLayout>
+
+            <include layout="@layout/line_horizontal"/>
+
+            <LinearLayout
+                style="@style/ll_default">
+
+                <com.example.hongcheng.common.view.RequiredTipTextView
+                    style="@style/requireTipDefault"
+                    app:requiredText="@string/hint_name"/>
+
+                <EditText
+                    android:id="@+id/et_add_card_info_name"
+                    style="@style/et_default"
+                    android:layout_marginLeft="@dimen/public_space_value_10"
+                    android:hint="@string/hint_input_card_name"
+                    android:inputType="text"
+                    android:layout_marginStart="@dimen/public_space_value_10" />
+
+            </LinearLayout>
+
+            <include layout="@layout/line_horizontal"/>
+
+            <LinearLayout
+                style="@style/ll_default">
+
+                <com.example.hongcheng.common.view.RequiredTipTextView
+                    style="@style/requireTipDefault"
+                    app:requiredText="@string/hint_content"/>
+
+                <EditText
+                    android:id="@+id/et_add_card_info_content"
+                    style="@style/et_default"
+                    android:layout_marginLeft="@dimen/public_space_value_10"
+                    android:hint="@string/hint_input_card_content"
+                    android:inputType="text"
+                    android:layout_marginStart="@dimen/public_space_value_10" />
+
+            </LinearLayout>
+
+            <include layout="@layout/line_horizontal"/>
+
+            <LinearLayout
+                android:id="@+id/ll_card_info_date_select"
+                style="@style/ll_default">
+
+                <com.example.hongcheng.common.view.RequiredTipTextView
+                    style="@style/requireTipDefault"
+                    app:requiredText="@string/hint_date"/>
+
+                <TextView
+                    android:id="@+id/tv_card_info_date"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:gravity="center_vertical"
+                    android:textSize="@dimen/normal_text_size"
+                    android:textColor="@color/text_default"
+                    android:layout_marginLeft="@dimen/public_space_value_10"
+                    android:hint="@string/hint_select_date"
+                    android:layout_marginStart="@dimen/public_space_value_10" />
+
+                <ImageView
+                    android:layout_width="@dimen/public_space_value_20"
+                    android:layout_height="@dimen/public_space_value_20"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_arrow_drop_down_black_24dp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_marginTop="@dimen/default_dimen"
+                android:padding="@dimen/default_dimen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_select_img"
+                android:textColor="@color/text_default"
+                android:textSize="@dimen/small_text_size"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_select_img_info"
+                android:background="@color/white"
+                android:paddingTop="@dimen/public_space_value_15"
+                android:paddingBottom="@dimen/public_space_value_20"
+                android:paddingLeft="@dimen/public_space_value_20"
+                android:paddingRight="@dimen/public_space_value_20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </android.support.v7.widget.RecyclerView>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/bt_save_card_info"
+        style="@style/bt_bottom"
+        android:text="@string/save" />
+
+</LinearLayout>

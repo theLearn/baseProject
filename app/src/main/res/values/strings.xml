@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">baseProject</string>
+    <!-- Strings related to main -->
+    <string name="my_message">我的消息</string>
+    <string name="home">首页</string>
+    <string name="my_shopping">我的商城</string>
+    <string name="search">查找</string>
+    <string name="my_apps">我的应用</string>
+    <string name="setting">设置</string>
+
+    <!-- Strings related to smart -->
+    <string name="animation_card">番剧</string>
+    <string name="movie_card">直播</string>
+    <string name="promote_card">推荐</string>
+    <string name="record_card">记录</string>
+    <string name="find_card">发现</string>
+
+    <string name="add_card">添加卡片</string>
+    <string name="hint_date">日&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;期</string>
+    <string name="hint_name">名&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;称</string>
+    <string name="hint_content">内&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;容</string>
+    <string name="hint_type">类&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;型</string>
+    <string name="hint_card_type">卡片种类</string>
+    <string name="hint_input_card_name">请输入卡片名称</string>
+    <string name="hint_select_date">请选择日期</string>
+    <string name="hint_input_card_content">请输入卡片内容</string>
+    <string name="hint_input_card_type">请输入卡片类型</string>
+    <string name="hint_select_img">请选择图片</string>
+</resources>
