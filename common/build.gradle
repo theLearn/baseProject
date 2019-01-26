@@ -45,8 +45,8 @@ dependencies {
     implementation supportLibs.logger
     api supportLibs.gson
     api supportLibs.glide
-    annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
-    kapt "com.github.bumptech.glide:compiler:4.8.0"
+    annotationProcessor supportLibs.glideCompiler
+    kapt supportLibs.glideCompiler
     //三方組件
     api supportLibs.pickerView
 
