@@ -12,9 +12,7 @@ class SelectImgAdapter : BaseListAdapter<String, SelectImgViewHolder>()  {
         const val MAX : Int = 5
     }
 
-    var listener : ImageViewWithDelete.OnImgDeleteListener? = null
-
-    fun setData(source : List<String>) {
+    fun setSource(source : List<String>) {
         data.clear()
         data.addAll(source)
         if(source.size < MAX) {
@@ -24,11 +22,13 @@ class SelectImgAdapter : BaseListAdapter<String, SelectImgViewHolder>()  {
         notifyDataSetChanged()
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SelectImgViewHolder {
+    var listener : ImageViewWithDelete.OnImgDeleteListener? = null
+
+    override fun onBaseCreateViewHolder(parent: ViewGroup, viewType: Int): SelectImgViewHolder {
         return SelectImgViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_select_img, parent, false))
     }
 
-    override fun onBindViewHolder(holder: SelectImgViewHolder, position: Int) {
+    override fun onBaseBindViewHolder(holder: SelectImgViewHolder, position: Int) {
         holder.iwd.setImageModule(data[position])
         holder.iwd.deleteView.setOnClickListener({
             listener?.onImgDelete(position)

@@ -16,7 +16,7 @@ import com.example.hongcheng.common.base.BaseListAdapter
 class AnimationCategoryAdapter(private var mContext: Context?) :
     BaseListAdapter<AnimationModel, AnimationCategoryViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AnimationCategoryViewHolder {
+    override fun onBaseCreateViewHolder(parent: ViewGroup, viewType: Int): AnimationCategoryViewHolder {
         val binding: ItemSmartCardBinding =
             DataBindingUtil.inflate(LayoutInflater.from(parent.context), R.layout.item_smart_card, parent, false);
         val holder = AnimationCategoryViewHolder(binding.root)
@@ -25,7 +25,7 @@ class AnimationCategoryAdapter(private var mContext: Context?) :
     }
 
 
-    override fun onBindViewHolder(holder: AnimationCategoryViewHolder, position: Int) {
+    override fun onBaseBindViewHolder(holder: AnimationCategoryViewHolder, position: Int) {
         val model: AnimationModel = data[position]
         holder.binding?.viewModel = model
         holder.binding?.executePendingBindings()

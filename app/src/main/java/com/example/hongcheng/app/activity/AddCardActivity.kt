@@ -51,7 +51,7 @@ class AddCardActivity : CommonActivity(), ImageViewWithDelete.OnImgDeleteListene
 
         mAdapter.listener = this
         recyclerView.adapter = mAdapter
-        mAdapter.setData(selectedPhotos)
+        mAdapter.setSource(selectedPhotos)
 
         mAdapter.onItemClickListener = this
 
@@ -98,7 +98,7 @@ class AddCardActivity : CommonActivity(), ImageViewWithDelete.OnImgDeleteListene
 
     override fun onImgDelete(position: Int) {
         selectedPhotos.removeAt(position)
-        mAdapter.setData(selectedPhotos)
+        mAdapter.setSource(selectedPhotos)
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -116,7 +116,7 @@ class AddCardActivity : CommonActivity(), ImageViewWithDelete.OnImgDeleteListene
                 selectedPhotos.addAll(photos)
             }
 
-            mAdapter.setData(selectedPhotos)
+            mAdapter.setSource(selectedPhotos)
         }
     }
 

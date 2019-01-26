@@ -14,7 +14,7 @@ import com.example.hongcheng.app.adapter.viewholders.AnimationDetailViewHolder
  */
 class AnimationDetailAdapter : BaseListAdapter<AnimationDetailModel, AnimationDetailViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AnimationDetailViewHolder {
+    override fun onBaseCreateViewHolder(parent: ViewGroup, viewType: Int): AnimationDetailViewHolder {
         val binding = DataBindingUtil.inflate<ItemListInfoBinding>(
             LayoutInflater.from(parent.context),
             R.layout.item_list_info,
@@ -27,7 +27,7 @@ class AnimationDetailAdapter : BaseListAdapter<AnimationDetailModel, AnimationDe
 
     }
 
-    override fun onBindViewHolder(holder: AnimationDetailViewHolder, position: Int) {
+    override fun onBaseBindViewHolder(holder: AnimationDetailViewHolder, position: Int) {
         val model: AnimationDetailModel = data[position]
         holder.binding?.viewModel = model
         holder.binding?.executePendingBindings()
